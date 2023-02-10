@@ -7,6 +7,13 @@ export const PROVIDERS = [
     validate: () => {}
   },
   {
+    name: 'event',
+    runtime: './runtime/providers/event',
+    autoDetect: false,
+    defaults: () => ({}),
+    validate: () => {}
+  },
+  {
     name: 'ga',
     runtime: './runtime/providers/ga',
     defaults: nuxtOptions => ({
@@ -16,6 +23,19 @@ export const PROVIDERS = [
     validate ({ id }) {
       if (!id) {
         throw new Error('[@nuxtjs/web-vitals] `googleAnalytics.id` is required for Google Analytics integration')
+      }
+    }
+  },
+  {
+    name: 'ga4',
+    runtime: './runtime/providers/ga4',
+    defaults: nuxtOptions => ({
+      eventCategory: 'Web Vitals',
+      id: process.env.GOOGLE_TAG_MANAGER_ID || (nuxtOptions.gtm && nuxtOptions.gtm.id)
+    }),
+    validate ({ id }) {
+      if (!id) {
+        throw new Error('[@nuxtjs/web-vitals] `gtm.id` is required for GA4 integration')
       }
     }
   },

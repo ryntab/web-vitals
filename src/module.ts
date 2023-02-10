@@ -4,10 +4,11 @@ import { defineNuxtModule, addPlugin, addTemplate, createResolver, isNuxt2 } fro
 import { PROVIDERS } from './providers'
 
 export interface ModuleOptions {
-  provider: 'auto' | 'log' | 'ga' | 'vercel' | 'api'
+  provider: 'auto' | 'log' | 'event' | 'ga' | 'ga4' | 'vercel' | 'api'
   debug: boolean
   disabled: boolean
   ga: { id: string }
+  ga4: { id: string }
   vercel: { dsn: string }
   api: { url: string }
 }

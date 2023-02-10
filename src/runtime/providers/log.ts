@@ -15,10 +15,13 @@ export function sendToAnalytics (context, metric, options: any) {
     listener(event)
   })
 
-  // eslint-disable-next-line no-console
-  console.log('[nuxt vitals]', metric.name, metric.value, context, {
-    context,
-    metric,
-    options
-  })
+
+  if (options?.debug) {
+    // eslint-disable-next-line no-console
+    console.log('[nuxt vitals]', metric.name, metric.value, context, {
+      context,
+      metric,
+      options
+    })
+  }
 }

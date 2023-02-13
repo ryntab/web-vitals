@@ -15,7 +15,6 @@ export function sendToAnalytics (context, metric, options: any) {
     listener(event)
   })
 
-
   if (options.debug) {
     // eslint-disable-next-line no-console
     console.log('[nuxt vitals]', metric.name, metric.value, context, {

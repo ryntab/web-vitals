@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/nuxt-modules/web-vitals/compare/v0.2.2...v0.2.3) (2023-02-13)
+
+
+### Features
+
+* :sparkles: add ga4 provider 🚧 & event provider ([66120c5](https://github.com/nuxt-modules/web-vitals/commit/66120c5bd2ea03e67fa42e37bf38f3239ca475c0))
+
+
+### Bug Fixes
+
+* :bug: linting fixes ([4f2068c](https://github.com/nuxt-modules/web-vitals/commit/4f2068c658cec599d738ed264b591e3f4401e015))
+
 ### [0.2.2](https://github.com/nuxt-modules/web-vitals/compare/v0.2.1...v0.2.2) (2022-11-29)
 
 
